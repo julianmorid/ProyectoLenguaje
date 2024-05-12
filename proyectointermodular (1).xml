@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="proyectoLenguaje.xsl"?>
+    <database name="proyectointermodular">
+        <!-- Tabla cliente -->
+        <table name="cliente">
+            <column name="id">1</column>
+            <column name="apellidos">Garcia Perez</column>
+            <column name="nombre">Pedro</column>
+            <column name="telefono">687453641</column>
+            <column name="idlocal">5</column>
+        </table>
+        <table name="cliente">
+            <column name="id">2</column>
+            <column name="apellidos">Villalba Sanchez</column>
+            <column name="nombre">Lucia</column>
+            <column name="telefono">624513056</column>
+            <column name="idlocal">9</column>
+        </table>
+        <!-- Tabla direccioncliente -->
+        <table name="direccioncliente">
+            <column name="id">1</column>
+            <column name="ciudad">Murcia</column>
+            <column name="direccion">Calle Urtilla/3</column>
+        </table>
+        <table name="direccioncliente">
+            <column name="id">2</column>
+            <column name="ciudad">Asturias</column>
+            <column name="direccion">Av.España/7</column>
+        </table>
+        <!-- Tabla direccion local -->
+        <table name="direccion Local">
+            <column name="id">5</column>
+            <column name="ciudad">toledo</column>
+            <column name="direccion">calle espartero/9</column>
+        </table>
+        <table name="direccion local">
+            <column name="id">9</column>
+            <column name="ciudad">Madrid</column>
+            <column name="direccion">Calle Rosal/2</column>
+        </table>
+        <!-- Tabla dispositivos -->
+        <table name="dispositivos">
+            <column name="id">1</column>
+            <column name="idtipo">6</column>
+            <column name="idmodelo">1</column>
+            <column name="nserie">z67u5</column>
+            <column name="idmarca">5</column>
+            <column name="idcliente">1</column>
+        </table>
+        <table name="dispositivos">
+            <column name="id">2</column>
+            <column name="idtipo">4</column>
+            <column name="idmodelo">3</column>
+            <column name="nserie">j56k3</column>
+            <column name="idmarca">1</column>
+            <column name="idcliente">2</column>
+        </table>
+        <!-- Tabla estadoherramientas -->
+        <table name="estadoherramientas">
+            <column name="idestado">1</column>
+            <column name="estado">En uso</column>
+        </table>
+        <table name="estadoherramientas">
+            <column name="idestado">2</column>
+            <column name="estado">Disponible</column>
+        </table>
+        <!-- Tabla estadoreparacion -->
+        <table name="estadoreparacion">
+            <column name="idestado">1</column>
+            <column name="estado">Completado</column>
+        </table>
+        <table name="estadoreparacion">
+            <column name="idestado">2</column>
+            <column name="estado">En proceso</column>
+        </table>
+        <!-- Tabla herramientas -->
+        <table name="herramientas">
+            <column name="id">1</column>
+            <column name="nombre">Destornillador</column>
+            <column name="idestado">1</column>
+            <column name="idmarca">2</column>
+            <column name="idtecnico">1</column>
+        </table>
+        <table name="herramientas">
+            <column name="id">2</column>
+            <column name="nombre">Voltímetro</column>
+            <column name="idestado">2</column>
+            <column name="idmarca">3</column>
+            <column name="idtecnico">2</column>
+        </table>
+        <!-- Tabla local -->
+        <table name="local">
+            <column name="id">5</column>
+            <column name="codigopostal">45516</column>
+            <column name="telefono">644789321</column>
+        </table>
+        <table name="local">
+            <column name="id">9</column>
+            <column name="codigopostal">28356</column>
+            <column name="telefono">678325634</column>
+        </table>
+        <!-- Tabla marcaherramientas -->
+        <table name="marcaherramientas">
+            <column name="idmarca">2</column>
+            <column name="marca">Stanley</column>
+            <column name="modelo">Trinquete</column>
+        </table>
+        <table name="marcaherramientas">
+            <column name="idmarca">3</column>
+            <column name="marca">Lovato</column>
+            <column name="modelo">ma501</column>
+        </table>
+        <!-- Tabla marcamaterial -->
+        <table name="marcamaterial">
+            <column name="idmarca">1</column>
+            <column name="marca">Asus</column>
+        </table>
+        <table name="marcamaterial">
+            <column name="idmarca">2</column>
+            <column name="marca">HP</column>
+        </table>
+        <!-- Tabla material -->
+        <table name="material">
+            <column name="id">1</column>
+            <column name="idtipo">1</column>
+            <column name="idmarca">1</column>
+            <column name="precio">300</column>
+            <column name="unidad">3</column>
+        </table>
+        <table name="material">
+            <column name="id">2</column>
+            <column name="idtipo">3</column>
+            <column name="idmarca">2</column>
+            <column name="precio">180</column>
+            <column name="unidad">7</column>
+        </table>
+        <!-- Tabla reparacion -->
+        <table name="reparacion">
+            <column name="id">2</column>
+            <column name="fecha">2024-02-18</column>
+            <column name="descripcion">Necesita un cambio de componentes</column>
+            <column name="idestado">1</column>
+            <column name="iddispositivo">2</column>
+        </table>
+        <table name="reparacion">
+            <column name="id">3</column>
+            <column name="fecha">2024-01-07</column>
+            <column name="descripcion">Muy mal estado de los componentes</column>
+            <column name="idestado">2</column>
+            <column name="iddispositivo">1</column>
+        </table>
+        <!-- Tabla reparaciones -->
+        <table name="reparaciones">
+            <column name="id">1</column>
+            <column name="nreparaciones">18</column>
+        </table>
+        <table name="reparaciones">
+            <column name="id">2</column>
+            <column name="nreparaciones">23</column>
+        </table>
+        <!-- Tabla tecnico -->
+        <table name="tecnico">
+            <column name="id">1</column>
+            <column name="nombre">pepe</column>
+            <column name="apellidos">fernandez</column>
+            <column name="idespecialidad">3</column>
+            <column name="idreparacion">3</column>
+            <column name="idcliente">NULL</column>
+        </table>
+        <table name="tecnico">
+            <column name="id">2</column>
+            <column name="nombre">lola</column>
+            <column name="apellidos">gomez</column>
+            <column name="idespecialidad">4</column>
+            <column name="idreparacion">2</column>
+            <column name="idcliente">NULL</column>
+        </table>
+    </database>
